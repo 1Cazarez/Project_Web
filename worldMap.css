@@ -1,0 +1,64 @@
+/* VARIABLES */
+:root {
+  --brown-dark: #5a3e2b;
+  --brown-light: #8b5e3c;
+  --cream: #fff8dc;
+  --gold: #facc15;
+  --text-dark: #2b1e12;
+  --radius: 12px;
+  --transition: 200ms ease;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, serif;
+  background-image: url("assets/map-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--text-dark);
+}
+
+/* NAVIGATION */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(90, 62, 43, 0.9);
+}
+
+.logo {
+  color: var(--cream);
+  font-size: 1.6rem;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: var(--cream);
+  transition: color var(--transition);
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
