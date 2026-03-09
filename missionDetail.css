@@ -16,9 +16,10 @@
   box-sizing: border-box;
 }
 
+/* PAGE BACKGROUND */
 body {
   font-family: Georgia, serif;
-  background-image: url("assets/map-bg.png");
+  background-image: url("assets/images/map-bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -27,7 +28,7 @@ body {
 }
 
 /* NAVIGATION */
-.nav {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,24 +36,47 @@ body {
   background-color: rgba(90, 62, 43, 0.9);
 }
 
-.logo {
+nav h1 {
   color: var(--cream);
-  font-size: 1.6rem;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 1.5rem;
 }
 
 .nav-links a {
   color: var(--cream);
+  text-decoration: none;
   transition: color var(--transition);
 }
 
 .nav-links a:hover {
   color: var(--gold);
+}
+
+/* MISSION HEADER */
+.mission-header {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.mission-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.mission-header p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1.1rem;
+}
+
+/* RELIC IMAGE */
+.relic-image {
+  display: block;
+  margin: 2rem auto;
+  width: 180px;
 }
 
 /* TIMELINE */
@@ -61,28 +85,47 @@ body {
   justify-content: center;
   gap: 2rem;
   padding: 3rem;
+  flex-wrap: wrap;
 }
 
+/* CHECKPOINT CARD */
 .checkpoint {
   background-color: rgba(255, 248, 220, 0.85);
-  padding: 1rem 2rem;
+  padding: 1.2rem;
   border-radius: var(--radius);
+  width: 180px;
+  text-align: center;
   transition: transform var(--transition);
 }
 
 .checkpoint:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+}
+
+/* PROGRESS STATES */
+.completed {
+  border: 3px solid #22c55e;
+}
+
+.active {
+  border: 3px solid var(--gold);
+}
+
+.locked {
+  opacity: 0.5;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+
   .timeline {
     flex-direction: column;
     align-items: center;
   }
 
-  .nav {
+  nav {
     flex-direction: column;
     gap: 1rem;
   }
+
 }
