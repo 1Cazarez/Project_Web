@@ -18,10 +18,15 @@
 /* BACKGROUND */
 body {
   font-family: Georgia, serif;
-  background-image: url("assets/map-bg2.png");
+
+  background-image:
+  linear-gradient(rgba(255,255,255,0.40), rgba(255,255,255,0.40)),
+  url("assets/map-bg2.png");
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   color: var(--text-dark);
 }
 
@@ -104,6 +109,11 @@ nav h1 {
 .treasure-section {
   text-align: center;
   padding: 2rem;
+  background-color: rgba(255,248,220,0.9);
+  width: 60%;
+  margin: 3rem auto;
+  border-radius: var(--radius);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
 }
 
 .treasure-section img {
