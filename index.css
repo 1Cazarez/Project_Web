@@ -140,3 +140,15 @@ body {
   90% { opacity: 1; }
   100% { background-position: -1579px 0; opacity: 0; }
 }
+h3 {
+  margin-top: 1rem;
+  color: var(--cream);
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+p{
+  color: #facc15; 
+}
+
+.btn :hover{
+    color: var(--gold);
+}
