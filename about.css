@@ -62,10 +62,12 @@ nav h1 {
 .about-section {
   text-align: center;
   padding: 3rem 2rem;
-  background-color: rgba(255,248,220,0.9);
+  background-color: rgba(255,248,220,0.92);
   width: 80%;
   margin: 2rem auto;
   border-radius: var(--radius);
+
+  box-shadow: 0 10px 22px rgba(0,0,0,0.2);
 }
 
 .about-image {
@@ -87,21 +89,28 @@ nav h1 {
   flex-wrap: wrap;
 }
 
+/* EXPLORER CARD */
 .team-member {
-  background-color: rgba(255,248,220,0.9);
+  background-color: rgba(255,248,220,0.92);
   padding: 1.5rem;
   border-radius: var(--radius);
   width: 220px;
-  transition: transform var(--transition), box-shadow var(--transition);
+
+  transition: transform 200ms ease,
+              box-shadow 200ms ease;
 }
 
+/* CARD HOVER EFFECT */
 .team-member:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.3);
+  transform: translateY(-6px) scale(1.03);
+
+  box-shadow:
+  0 10px 22px rgba(0,0,0,0.3),
+  0 0 14px rgba(250,204,21,0.5);
 }
 
 .team-member img {
-  width: 70px;
+  width: 90px;
   margin-bottom: 0.5rem;
 }
 
@@ -109,16 +118,28 @@ nav h1 {
 .treasure-section {
   text-align: center;
   padding: 2rem;
-  background-color: rgba(255,248,220,0.9);
+
+  background-color: rgba(255,248,220,0.92);
   width: 60%;
   margin: 3rem auto;
+
   border-radius: var(--radius);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+
+  box-shadow: 0 10px 22px rgba(0,0,0,0.2);
 }
 
+/* TREASURE IMAGE GLOW */
 .treasure-section img {
   width: 120px;
   margin-bottom: 1rem;
+
+  transition: transform 200ms ease,
+              filter 200ms ease;
+}
+
+.treasure-section img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px rgba(250,204,21,0.7));
 }
 
 /* RESPONSIVE */
@@ -132,6 +153,14 @@ nav h1 {
   .team-container {
     flex-direction: column;
     align-items: center;
+  }
+
+  .about-section {
+    width: 90%;
+  }
+
+  .treasure-section {
+    width: 90%;
   }
 
 }
