@@ -1,12 +1,10 @@
 /* VARIABLES */
 :root {
   --brown-dark: #5a3e2b;
-  --brown-light: #8b5e3c;
   --cream: #fff8dc;
   --gold: #facc15;
   --text-dark: #2b1e12;
   --radius: 12px;
-  --transition: 200ms ease;
 }
 
 /* RESET */
@@ -16,18 +14,24 @@
   box-sizing: border-box;
 }
 
+/* PAGE BACKGROUND */
 body {
   font-family: Georgia, serif;
-  background-image: url("assets/map-bg.png");
+
+  background-image:
+  linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+  url("assets/map-bg.png");
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
   color: var(--text-dark);
 }
 
 /* NAVIGATION */
-.nav {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -35,54 +39,164 @@ body {
   background-color: rgba(90, 62, 43, 0.9);
 }
 
-.logo {
+nav h1 {
   color: var(--cream);
-  font-size: 1.6rem;
 }
 
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 1.5rem;
 }
 
 .nav-links a {
   color: var(--cream);
-  transition: color var(--transition);
+  text-decoration: none;
 }
 
 .nav-links a:hover {
   color: var(--gold);
 }
 
-/* TIMELINE */
-.timeline {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 3rem;
-}
-
-.checkpoint {
-  background-color: rgba(255, 248, 220, 0.85);
-  padding: 1rem 2rem;
+/* MISSION HEADER */
+.mission-header {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: rgba(255,248,220,0.9);
+  width: 80%;
+  margin: 2rem auto;
   border-radius: var(--radius);
-  transition: transform var(--transition);
 }
 
-.checkpoint:hover {
-  transform: scale(1.05);
+.mission-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.mission-header p {
+  max-width: 700px;
+  margin: auto;
+}
+
+/* RELIC IMAGE */
+.relic-image {
+  display: block;
+  margin: 2rem auto;
+  width: 180px;
+}
+
+/* ROUTE CONTAINER */
+.route-container{
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  margin-top: 80px; 
+  height: 700px;
+}
+
+/* ROUTE IMAGE */
+.route-map{
+  width:100%;
+}
+
+/* CHECKPOINT POSITIONING */
+.checkpoint{
+  position:absolute;
+}
+
+/* MOVE CARDS HERE */
+.checkpoint1{ top:-40px; left:-60px; }
+.checkpoint2{ top:50px; left:290px; }
+.checkpoint3{ top:370px; left:320px; }
+.checkpoint4{ top:275px; left:600px; }
+.checkpoint5{ top:465px; left:775px; }
+
+/* CARD */
+.card{
+  width:170px;
+  height:110px;
+  position:relative;
+  perspective:1000px;
+  transform-style: preserve-3d;
+}
+
+/* CARD SIDES */
+.card-front,
+.card-back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:rgba(255,248,220,0.95);
+  border-radius:var(--radius);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:10px;
+  backface-visibility:hidden;
+  transition: transform .6s;
+  box-shadow:0 6px 15px rgba(0,0,0,0.25);
+}
+
+/* BACK SIDE */
+.card-back{
+  transform: rotateY(180deg);
+}
+
+/* FLIP */
+.card:hover .card-front{
+  transform: rotateY(180deg);
+}
+
+.card:hover .card-back{
+  transform: rotateY(360deg);
+}
+
+/* PROGRESS STATES */
+
+.completed .card-front{
+  border:3px solid #22c55e;
+}
+
+.active .card-front{
+  border:3px solid var(--gold);
+  animation:pulse 2s infinite;
+}
+
+.locked .card-front{
+  opacity:.5;
+}
+
+/* TROPHY BADGE */
+.active .card-front::after{
+  content:"🏆";
+  position:absolute;
+  top:-10px;
+  right:-10px;
+  font-size:20px;
+}
+
+/* PULSE ANIMATION */
+@keyframes pulse{
+  0%{ box-shadow:0 0 0 rgba(250,204,21,0.5); }
+  50%{ box-shadow:0 0 18px rgba(250,204,21,1); }
+  100%{ box-shadow:0 0 0 rgba(250,204,21,0.5); }
 }
 
 /* RESPONSIVE */
-@media (max-width: 768px) {
-  .timeline {
-    flex-direction: column;
-    align-items: center;
+@media (max-width:768px){
+
+  .route-container{
+    height:auto;
   }
 
-  .nav {
-    flex-direction: column;
-    gap: 1rem;
+  .checkpoint{
+    position:relative;
+    margin:20px auto;
   }
+
+  nav{
+    flex-direction:column;
+    gap:1rem;
+  }
+
 }
