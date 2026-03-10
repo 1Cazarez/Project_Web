@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mission Detail</title>
   <link rel="stylesheet" href="missionDetail.css">
 </head>
@@ -10,41 +9,89 @@
 
 <header>
   <nav>
-    <h2>Quest Explorer</h2>
-    <div>
+    <h1>Quest Explorer</h1>
+    <div class="nav-links">
       <a href="index.html">Home</a>
-      <a href="world-map.html">World Map</a>
-      <a href="mission.html">Mission</a>
+      <a href="worldMap.html">World Map</a>
+      <a href="missionDetail.html">Mission</a>
       <a href="about.html">About</a>
     </div>
   </nav>
 </header>
 
-<main style="padding:2rem; display:grid; grid-template-columns:1fr 1fr; gap:2rem;">
-  
-  <section>
-    <h1>Mission: The Frozen Summit</h1>
-    <p><strong>Difficulty:</strong> Hard</p>
-    <p><strong>Duration:</strong> 3 Days</p>
-    <p>Climb the highest peak and retrieve the ancient artifact.</p>
-  </section>
+<main>
 
-  <section class="timeline">
-    <div class="checkpoint">
-      <h3>Checkpoint 1</h3>
-      <p>Reach base camp.</p>
-    </div>
+<section class="mission-header">
+  <h1>The Jungle Temple Expedition</h1>
+  <p>
+    Deep within the jungle lies an ancient temple rumored to contain a lost treasure.
+    Navigate through dangerous terrain and uncover the relic hidden within.
+  </p>
 
-    <div class="checkpoint">
-      <h3>Checkpoint 2</h3>
-      <p>Cross the ice bridge.</p>
-    </div>
+  <img src="assets/relic.png" alt="Lost Treasure Relic" class="relic-image">
+</section>
 
-    <div class="checkpoint">
-      <h3>Checkpoint 3</h3>
-      <p>Summit the mountain.</p>
+
+<section class="route-container">
+
+<img src="assets/route.png" alt="Treasure Route" class="route-map">
+
+
+<div class="checkpoint checkpoint1 completed">
+  <div class="card">
+    <div class="card-front">⚓ Start</div>
+    <div class="card-back">
+      Difficulty: Easy <br>
+      Reward: Map Fragment
     </div>
-  </section>
+  </div>
+</div>
+
+
+<div class="checkpoint checkpoint2 completed">
+  <div class="card">
+    <div class="card-front">🛳️ Shipwreck</div>
+    <div class="card-back">
+      Difficulty: Medium <br>
+      Reward: Compass
+    </div>
+  </div>
+</div>
+
+
+<div class="checkpoint checkpoint3 active">
+  <div class="card">
+    <div class="card-front">🌴 Jungle Path</div>
+    <div class="card-back">
+      Difficulty: Medium <br>
+      Reward: Ancient Key
+    </div>
+  </div>
+</div>
+
+
+<div class="checkpoint checkpoint4 locked">
+  <div class="card">
+    <div class="card-front">🪨 Hidden Cave</div>
+    <div class="card-back">
+      Difficulty: Hard <br>
+      Reward: Treasure Chest
+    </div>
+  </div>
+</div>
+
+
+<div class="checkpoint checkpoint5 locked">
+  <div class="card">
+    <div class="card-front">💰 Lost Treasure</div>
+    <div class="card-back">
+      Difficulty: Legendary <br>
+      Reward: Golden Relic
+    </div>
+  </div>
+</div>
+
+</section>
 
 </main>
 
