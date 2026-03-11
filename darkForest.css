@@ -20,7 +20,7 @@ body {
 
   background-image:
   linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
-  url("assets/map-bg.png");
+  url("assets/darkForest");
 
   background-size: cover;
   background-position: center;
@@ -92,7 +92,7 @@ nav h1{
 .mission-header {
   text-align: center;
   padding: 3rem 2rem;
-  background-color: rgba(184, 182, 175, 0.65);
+  background-color: rgb(255, 255, 255,0.65);
   width: 50%;
   margin: 2rem auto;
   border-radius: var(--radius);
@@ -127,8 +127,7 @@ nav h1{
 /* ROUTE IMAGE */
 .route-map{
   width:100%;
-  filter: contrast(200%) brightness(0.7);
-  filter: drop-shadow(0 0 1px rgba(0,0,0,1));
+  filter: brightness(0) invert(1);
 }
 
 /* CHECKPOINT POSITIONING */
@@ -158,7 +157,7 @@ nav h1{
   position:absolute;
   width:100%;
   height:100%;
-  background:rgba(255,248,220,0.95);
+  background:rgba(255, 255, 255,0.95);
   border-radius:var(--radius);
   display:flex;
   align-items:center;
