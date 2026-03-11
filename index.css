@@ -35,6 +35,17 @@ body {
   color: var(--text-dark);
 }
 
+nav{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:0.5rem;
+
+  padding:1rem 2rem;
+
+  background-color: rgb(0, 0, 0);
+}
 /* NAVIGATION */
 .nav {
   display: flex;
@@ -58,7 +69,7 @@ body {
   justify-content: center;
 }
 
- a {
+a {
   transition: color var(--transition);
   background: #833AB4;
   background: linear-gradient(90deg,rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
@@ -66,6 +77,16 @@ body {
   background-clip: text;
   color: transparent;
   text-shadow: 0px 0px 5px rgba(0,0,0,0.3);
+  font-size: 2.5rem;
+}
+
+my-element{
+  display: inline-block;
+  border: 2px solid rgba(253, 29, 29, 0.6);
+  border-radius: 8px;
+  padding: 10px 20px;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .nav-links a:hover {
@@ -82,7 +103,7 @@ body {
 
 .hero{
   text-align: center;
-  padding: 4rem 2rem;
+  padding: 1rem 2rem;
   z-index: 1;
 }
 
@@ -139,4 +160,33 @@ body {
   0% { background-position: 0 0; opacity: 1;}
   90% { opacity: 1; }
   100% { background-position: -1579px 0; opacity: 0; }
+}
+h3 {
+  margin-top: 1rem;
+  color: var(--cream);
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+p{
+  color: #facc15; 
+}
+
+.btn :hover{
+    color: var(--gold);
+}
+
+.signpost {
+  position: fixed;
+  left: 1200px;
+  top: 19.75%;
+  background: rgba(0, 0, 0, 0.7);
+  border-right: 2px solid rgba(253, 29, 29, 0.6);
+  padding: 20px;
+  color: orange;
+  font-size: 1.2rem;
+  backdrop-filter: blur(4px);
+  text-align: center;
+}
+b{
+  color: red;
+  font-size: small;
 }
